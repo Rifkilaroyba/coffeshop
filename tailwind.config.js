@@ -30,9 +30,21 @@ module.exports = {
       boxShadow: {
         soft: '0 10px 30px -12px rgba(0,0,0,0.25)',
       },
+      keyframes: {
+        scaleIn: {
+          '0%': { transform: 'scale(0.8)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(16px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        'scale-in': 'scaleIn 0.2s ease-out forwards',
+        'slide-up': 'slideUp 0.25s ease-out forwards',
+      },
     },
   },
   plugins: [],
 }
-
-
